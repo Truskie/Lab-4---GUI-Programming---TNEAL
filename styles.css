@@ -1,0 +1,52 @@
+/* == Global == */
+body { font-family: Arial, sans-serif; padding: 2rem; max-width: 860px; margin: 0
+auto; }
+section { margin-bottom: 3rem; border-top: 3px solid #16213e; padding-top: 1rem; }
+/* == Exercise 1 - Accordion == */
+.accordion { list-style: none; padding: 0; margin: 0; }
+.accordion-item { border: 1px solid #ccc; margin-bottom: 4px; border-radius: 4px; }
+.accordion-trigger {
+ width: 100%; text-align: left; padding: 0.75rem 1rem;
+ background: #f0f0f0; border: none; cursor: pointer; font-size: 1rem;
+}
+.accordion-panel { max-height: 0; overflow: hidden; transition: max-height 0.3s
+ease; padding: 0 1rem; }
+.accordion-item.open .accordion-panel { max-height: 200px; padding: 0.5rem 1rem; }
+.accordion-item.open .accordion-trigger { background: #16213e; color: white; }
+/* == Exercise 2 - Tags == */
+#tag-input { padding: 0.5rem; font-size: 1rem; width: 300px; border: 1px solid
+#ccc; border-radius: 4px; }
+#tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem;
+}
+.tag {
+ display: flex; align-items: center; gap: 0.4rem;
+ background: #16213e; color: white;
+ padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.9rem;
+}
+.tag-remove { cursor: pointer; font-weight: bold; font-size: 1rem; line-height: 1;
+}
+.tag-remove:hover { color: #ff6b6b; }
+/* == Exercise 3 - Cards == */
+#filter-bar { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.filter-btn {
+ padding: 0.4rem 1rem; border: 2px solid #16213e;
+ background: white; cursor: pointer; border-radius: 4px;
+}
+.filter-btn.active { background: #16213e; color: white; }
+#card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.card {
+ padding: 1.5rem; background: #f9f9f9; border: 1px solid #ddd;
+ border-radius: 6px; text-align: center; font-weight: bold; transition: opacity
+0.2s;
+}
+.card.hidden { opacity: 0; pointer-events: none; }
+/* == Exercise 4 - Inline Edit == */
+#edit-list { list-style: none; padding: 0; }
+.edit-item {
+ padding: 0.6rem 1rem; border: 1px solid #ddd; margin-bottom: 4px;
+ border-radius: 4px; cursor: pointer; font-size: 1rem;
+}
+.edit-item.editing { border-color: #16213e; background: #eef; }
+.edit-item input { border: none; background: transparent; font-size: 1rem; width:
+100%; outline: none; }
+.hint-text { font-size: 0.85rem; color: #888; }

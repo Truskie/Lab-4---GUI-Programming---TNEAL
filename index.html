@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Lab 4 - Event Delegation</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Exercise 1 -->
+ <section id="ex1">
+ <h2>Exercise 1 - Accordion Menu</h2>
+ <ul class="accordion">
+ <li class="accordion-item">
+ <button class="accordion-trigger">What is event delegation?</button>
+ <div class="accordion-panel">
+ <p>Delegation attaches one listener to a parent element
+ instead of many listeners on each child.</p>
+ </div>
+ </li>
+ <li class="accordion-item">
+ <button class="accordion-trigger">Why use closest()?</button>
+ <div class="accordion-panel">
+ <p>closest() walks up the DOM tree and returns the first
+ ancestor that matches a CSS selector.</p>
+ </div>
+ </li>
+ <li class="accordion-item">
+ <button class="accordion-trigger">What does matches() do?</button>
+ <div class="accordion-panel">
+ <p>matches() tests whether an element satisfies a given
+ CSS selector, returning true or false.</p>
+ </div>
+ </li>
+ </ul>
+ </section>
+ <!-- Exercise 2 -->
+ <section id="ex2">
+ <h2>Exercise 2 - Live Tag Builder</h2>
+ <div id="tag-input-row">
+ <input type="text" id="tag-input" placeholder="Type a tag and press Enter">
+ </div>
+ <div id="tag-container">
+ <!-- Tags are injected here by JS -->
+ </div>
+ </section>
+ <!-- Exercise 3 -->
+ <section id="ex3">
+ <h2>Exercise 3 - Filterable Card Grid</h2>
+ <div id="filter-bar">
+ <button class="filter-btn active" data-filter="all">All</button>
+ <button class="filter-btn" data-filter="design">Design</button>
+ <button class="filter-btn" data-filter="dev">Dev</button>
+ <button class="filter-btn" data-filter="research">Research</button>
+ </div>
+ <div id="card-grid">
+ <div class="card" data-category="design">Brand Guidelines</div>
+ <div class="card" data-category="dev">REST API Docs</div>
+ <div class="card" data-category="research">User Interviews</div>
+ <div class="card" data-category="design">Icon Set</div>
+ <div class="card" data-category="dev">Component Library</div>
+ <div class="card" data-category="research">A/B Test Results</div>
+ </div>
+ </section>
+ <!-- Exercise 4 -->
+ <section id="ex4">
+ <h2>Exercise 4 - Inline Edit List</h2>
+ <ul id="edit-list">
+ <li class="edit-item" data-id="1">Buy groceries</li>
+ <li class="edit-item" data-id="2">Finish lab report</li>
+ <li class="edit-item" data-id="3">Email professor</li>
+ </ul>
+ <p class="hint-text">Double-click any item to edit it.</p>
+ </section>
+ <!-- Uncomment one at a time while testing -->
+ <script src="exercise1.js"></script>
+ <script src="exercise2.js"></script>
+ <script src="exercise3.js"></script>
+ <script src="exercise4.js"></script>
+</body>
+</html>
